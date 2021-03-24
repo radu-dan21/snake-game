@@ -8,7 +8,8 @@ class Program:
     def __init__(self):
         self.__settings = Settings()
         tokens = self.__settings.read_file()
-        self.__board = Board(tokens[0], tokens[1])
+
+        self.__board = Board(tokens[0], tokens[1])  # tokens[0] = dimension, tokens[1] = apple_count
         self.__service = Service(self.__board)
         self.__UI = UI(self.__service)
 
